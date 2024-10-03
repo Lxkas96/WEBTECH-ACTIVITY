@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marvel Superheroes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://static.wikia.nocookie.net/marvelcinematicuniverse/images/5/51/The_Big_Three_v_Thanos.jpg/revision/latest?cb=20190520234152'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        main {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; 
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            width: 200px;
+            height: 250px;
+            margin: 10px;
+            align-items: flex-end;
+            transition: transform 0.3s;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .card img.main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            transition: opacity 0.3s;
+        }
+
+        .card img.hover-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover img.main-image {
+            opacity: 0;
+        }
+
+        .card:hover img.hover-image {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marvel Superheroes</h1>
+    </header>
+
+    <main>
+        <section class="card-container">
+            <div class="card">
+                <p>Iron Man</p>
+                <img src="https://avatarfiles.alphacoders.com/207/207641.jpg" alt="Iron Man" class="main-image">
+                <img src="https://variety.com/wp-content/uploads/2013/03/ironman31.jpg?w=1000&h=667&crop=1&resize=1000%2C667" alt="Iron Man Alt" class="hover-image">
+                <h3>Iron Man</h3>
+            </div>
+            <div class="card">
+                <p>Thor</p>
+                <img src="https://wallpapers.com/images/featured-full/thor-qzytdg8xliuaelun.jpg" alt="Thor" class="main-image">
+                <img src="https://mediaproxy.salon.com/width/1200/https://media2.salon.com/2019/07/thor-ragnarok2.jpg" alt="Thor Alt" class="hover-image">
+                <h3>Thor</h3>
+            </div>
+            <div class="card">
+                <p>Captain America</p>
+                <img src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg" alt="Captain America" class="main-image">
+                <img src="https://akns-images.eonline.com/eol_images/Entire_Site/2013924/rs_1024x759-131024111419-1024.captain-america-2.jpg?fit=around%7C1024:759&output-quality=90&crop=1024:759;center,top" alt="Captain America Alt" class="hover-image">
+                <h3>Captain America</h3>
+            </div>
+            <div class="card">
+                <p>Hulk</p>
+                <img src="https://www.pluggedin.com/wp-content/uploads/2019/12/the-hulk-1024x640.jpg" alt="Hulk" class="main-image">
+                <img src="https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/large/800/The-Hulk.The-Incredible-Hulk.webp" alt="Hulk Alt" class="hover-image">
+                <h3>Hulk</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Lucas M. Lapingcao | BSIT | IT 502P | Asian College of Technology</p>
+    </footer>
+</body>
+</html>
